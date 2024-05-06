@@ -21,7 +21,7 @@ while True:
     if resp == 1:
         os.system('cls')
         for x in productos:
-            print(f'{x.center(20, ' ')}: {productos[x]}')
+            print(f'{x.center(20, " ")}: {productos[x]}')
         print()
     elif resp == 2:
         while True:
@@ -32,10 +32,17 @@ while True:
             else:
                 print('Solo ingrese letras')
         if new_item in productos:
-            print('Error: El producto ya existe')
+            os.system('cls')
+            print('Error: El producto ya existe\n')
         else:
             os.system('cls')
-            productos[new_item] = 0
+            while True:
+                try:
+                   productos[new_item] = int(input('Ingrese cuanto inventario hay:\n'))
+                   break
+                except:
+                    os.system('cls')
+                    print('Por favor, ingrese un numero\n')
             print('Producto agregado exitosamente.')
     elif resp == 3:
         while True:

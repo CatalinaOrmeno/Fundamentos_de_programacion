@@ -43,6 +43,7 @@ while True:
                 except:
                     os.system('cls')
                     print('Por favor, ingrese un numero\n')
+            os.system('cls')
             print('Producto agregado exitosamente.')
     elif resp == 3:
         while True:

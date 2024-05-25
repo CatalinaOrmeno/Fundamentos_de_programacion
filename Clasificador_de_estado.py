@@ -1,4 +1,12 @@
-#El propocito de este algoritmo es calificador de estado, que sirve para comprovar si un cliente es apto para pedir un prestamo bancario o no.
+'''
+El proposito de este algoritmo es un calificador de estado
+que sirve para comprovar si un cliente es apto para pedir un prestamo bancario o no.
+-----------------------------------------------------------------------------------
+nombre = nombre del cliente
+edad = edad del cliente
+est_civil = estado civil del cliente
+saldo = saldo
+'''
 
 print('Bienvenido al clasificador de estados de cliente')
 
@@ -12,7 +20,7 @@ nombre=nombre.capitalize()
 est_civil=est_civil.capitalize()
 
 #Verificación del nombre
-if nombre.isalpha()==False:
+if not nombre.isalpha():
     exit('Error: Nombre inválido')
 
 #Verificación de la edad
@@ -20,10 +28,10 @@ if edad < 18 or edad > 60:
     exit('Error: Edad inválida')
 
 #Verificación del estado civil
-if est_civil.isalpha()==False:
+if not est_civil.isalpha():
     exit('Error: Estado civil inválido')
 
-if 'Soltero' in est_civil==False and 'Casado' in est_civil==False:
+if not 'Soltero' in est_civil and not 'Casado' in est_civil:
     exit('Error: Estado civil inválido')
 
 #Verificación del saldo

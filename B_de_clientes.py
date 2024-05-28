@@ -104,5 +104,3 @@ while True:
         exit('Adiós!')
     else:
         print('Error: opción no válida\n')
-
-

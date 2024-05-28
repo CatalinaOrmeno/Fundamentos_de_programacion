@@ -1,3 +1,12 @@
+'''
+Este codigo sirve para reservar entradas para el cine.
+------------------------------------------------------
+cine = Son las filas ya agrupadas
+def imprimir_cine = sirve para tirar a la pantalla las filas del cine con los números de asientos
+np.where = sirve para encontrar un elemento dentro de un array
+ind [0][0] = sirve para saber en qu indice esta el objeto encontrado del (np.where)
+'''
+
 import numpy as np
 import os
 
@@ -38,6 +47,7 @@ while True:
     except:
         os.system('cls')
         print('Error: ingreso no valido(Ingrese solo números)\n')
+        imprimir_cine()
         continue
     if num in range(1, 11):
         break

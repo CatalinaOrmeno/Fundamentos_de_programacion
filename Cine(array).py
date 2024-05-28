@@ -19,7 +19,7 @@ def imprimir_cine():
 
 while True:
     imprimir_cine()
-    resp = input('Que en que fila desea reservar?:\n').capitalize().replace(' ','')
+    resp = input('¿En que fila desea reservar?:\n').capitalize().replace(' ','')
     if resp.isalpha() == False:
         os.system('cls')
         print('Error: la respuesta no es valida\n')
@@ -31,7 +31,25 @@ while True:
 
 ind = np.where(cine == resp)
 ind = ind[0][0]
-num = 10
+
+while True:
+    try:
+        num = int(input('¿Que asiento desea reservar?:\n'))
+    except:
+        os.system('cls')
+        print('Error: ingreso no valido(Ingrese solo números)\n')
+        continue
+    if num in range(1, 11):
+        break
+    else:
+        os.system('cls')
+        print('Error: número de entrada no valido')
+        imprimir_cine()
+        continue
+
 cine[ind, num] = 'X'
+os.system('cls')
+print('Entrada reservada exitosamente!')
 
 imprimir_cine()
+print(f'Entrada:\nFila {resp}   Número {num}')

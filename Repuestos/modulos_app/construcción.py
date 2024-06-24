@@ -24,3 +24,55 @@ def limpiar_pantalla():
     '''
     import os
     os.system('cls')
+
+def verificar_ingreso(pronombre,dato):
+    while True:
+        valor = input(f'Ingrese {pronombre} {dato} del repuesto:\n')
+        resp = input(f'{dato.upper()}: {valor}\n¿Es correcto?(s/n):\n').lower().replace(' ', '')
+        if resp in ['s','si']:
+            limpiar_pantalla()
+            return valor
+        elif resp in ['n','no']:
+            limpiar_pantalla()
+            print('Okey, intente de nuevo')
+        else:
+            limpiar_pantalla()
+            print('Error: respuesta invalida\nIntente con (s, si , n, no)\n')
+
+def verificar_tipo():
+    while True:
+        tipo = input(f'Ingrese el tipo de repuesto (AUTOMOTRIZ / MOTOCICLETA):\n').upper().replace(' ', '')
+        if tipo == 'AUTOMOTRIZ' or tipo == 'MOTOCICLETA':
+            limpiar_pantalla()
+            resp = input(f'TIPO: {tipo}\n¿Es correcto?(s/n):\n').lower().replace(' ', '')
+            if resp in ['s','si']:
+                limpiar_pantalla()
+                return tipo
+            elif resp in ['n','no']:
+                limpiar_pantalla()
+                print('Okey, intente de nuevo')
+            else:
+                limpiar_pantalla()
+                print('Error: respuesta invalida\nIntente con (s, si , n, no)\n')
+        else:
+            limpiar_pantalla()
+            print('Error: respuesta invalida.\nIntente de nuevo.\n')
+
+def verificar_num(dato):
+    while True:
+        try:
+            valor = int(input(f'Ingrese el {dato} del repuesto:\n'))
+        except:
+            limpiar_pantalla()
+            print('Error: ingreso invalido.\nSolo ingrese números.\n')
+            continue
+        resp = input(f'{dato.upper()}: {valor}\n¿Es correcto?(s/n):\n').lower().replace(' ', '')
+        if resp in ['s','si']:
+            limpiar_pantalla()
+            return valor
+        elif resp in ['n','no']:
+            limpiar_pantalla()
+            print('Okey, intente de nuevo')
+        else:
+            limpiar_pantalla()
+            print('Error: respuesta invalida\nIntente con (s, si , n, no)\n')

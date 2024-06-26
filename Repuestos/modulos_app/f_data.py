@@ -94,7 +94,7 @@ def exportar(ruta_j, ruta_c):
                     repuesto['modelo'],
                     repuesto['tipo'],
                     repuesto['valor'],
-                    repuesto['stock'],]
+                    repuesto['stock']]
             with open(ruta_c, mode='a',newline='') as open_csv:
                 whiter = csv.writer(open_csv, delimiter=',')
                 whiter.writerow(line)

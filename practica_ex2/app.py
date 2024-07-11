@@ -16,10 +16,9 @@
 4. Pruebas:
    - Revisa y prueba el código para asegurar su correcto funcionamiento en el nuevo contexto.
 '''
-from modules.opciones import poblar
+from modules.opciones import poblar,cls,clasificar,exportar
 menup = ['Poblar Inventario',
-         'Clasificar Inventario',
-         'Mostrar Estadísticas',
+         'Clasificar Inventario y mostrar',
          'Exportar Inventario',
          'Salir']
 
@@ -41,14 +40,17 @@ while True:
         print(f'{ind+1}. {opc}')
     resp = input('¿Que deseas hacer?: ')
     if resp == '1':
+        cls()
         poblar(data)
     elif resp == '2':
-        pass
+        cls()
+        clasificar(data)
     elif resp == '3':
-        pass
+        cls()
+        exportar(data)
     elif resp == '4':
-        pass
-    elif resp == '5':
+        cls()
         exit('Gracias por ocupar el programa!')
     else:
+        cls()
         print('Error: respuesta no valida')

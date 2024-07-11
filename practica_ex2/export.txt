@@ -1,0 +1,12 @@
+PRODUCTOS   STOCK       
+Leche       20          
+Manzanas    98          
+Naranjas    110         
+Plátanos    94          
+Uvas        38          
+Peras       74          
+Kiwis       58          
+Fresas      83          
+Mangos      108         
+Piñas       104         
+Sandías     32          
